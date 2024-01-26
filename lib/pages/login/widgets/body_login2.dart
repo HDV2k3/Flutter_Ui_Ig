@@ -135,12 +135,29 @@ class BodyLogin2 extends StatelessWidget {
           ],
         ),
       SizedBox(height: 36),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
+
+
           children: [
+
             Text("Don't have an account?"),
-            SizedBox(width: 5),
-          Text("Sign up",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),)
+
+            TextButton(
+
+
+              onPressed: () {
+                // Xử lý sự kiện khi text button được nhấn
+              },
+
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.blue,
+
+              ),
+              child: Text('Sign up'),
+            ),
           ],
         )
       ],
