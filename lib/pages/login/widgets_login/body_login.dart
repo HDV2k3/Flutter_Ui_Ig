@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BodyLogin extends StatelessWidget {
+  const BodyLogin({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -11,31 +13,30 @@ class BodyLogin extends StatelessWidget {
           width: 182,
           height: 49,
         ),
-        SizedBox(height: 60),
+        const SizedBox(height: 60),
         Image.asset(
           'assets/images/User.png',
           width: 85,
           height: 115,
         ),
-        SizedBox(height: 16),
-        Container(
-          width: 307,
-          height: 44,
-          child: ElevatedButton(
-            onPressed: () {
-
-            },
-        style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue,
-          foregroundColor:Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          )
-        ),
+        const SizedBox(height: 16),
+        ElevatedButton(
+          onPressed: () {
+          },
+          style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+        foregroundColor:Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        )
+                ),
+          child: Container(
+            width: 307,
+            height: 44,
             child:const Text('log In'),
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         TextButton(
           onPressed: () {
             // Xử lý sự kiện khi text button được nhấn
@@ -44,7 +45,7 @@ class BodyLogin extends StatelessWidget {
             backgroundColor: Colors.white,
             foregroundColor: Colors.blue,
           ),
-          child: Text('Switch accounts'),
+          child: const Text('Switch accounts'),
         ),
       ],
     );

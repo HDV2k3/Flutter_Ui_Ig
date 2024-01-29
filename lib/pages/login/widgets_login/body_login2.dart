@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/main.dart';
-import 'package:ig_ui/pages/login/widgets/topbarlogin.dart';
+
 
 class BodyLogin2 extends StatelessWidget {
+  const BodyLogin2({super.key});
+
   @override
   Widget build(BuildContext context) {
     TextEditingController nameController = TextEditingController(text: 'asad_khasanov',);
@@ -17,37 +18,35 @@ class BodyLogin2 extends StatelessWidget {
           width: 182,
           height: 49,
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
 
 
         Padding(
-        padding: EdgeInsets.all(16), // Đặt giá trị padding theo ý muốn
+        padding: const EdgeInsets.all(16), // Đặt giá trị padding theo ý muốn
         child: Column(
         children: [
         TextFormField(
-        controller: nameController,style: TextStyle(color: Colors.black),
+        controller: nameController,style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
           filled:true,
-          fillColor: Color(0xFAFAFA),
+          fillColor: const Color(0x00fafafa),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-        color: const Color(0xFAFAFA).withOpacity(0.1),
+        color: const Color(0x00fafafa).withOpacity(0.1),
         width: 0.5,
         ),
 
         ),
         ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         TextFormField(
         decoration: InputDecoration(
           filled:true,
-        fillColor: Color(0xFAFAFA),
+        fillColor: const Color(0x00fafafa),
         labelText: 'Password',labelStyle: TextStyle(color: Colors.grey[600]),
         border: OutlineInputBorder(
-
-
           borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
         color: const Color(0xFF000000).withOpacity(0.1),
@@ -73,12 +72,12 @@ class BodyLogin2 extends StatelessWidget {
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.blue,
               ),
-              child: Text('Forgot password?'),
+              child: const Text('Forgot password?'),
             ),
           ],
         ),
-        SizedBox(height: 16),
-        Container(
+        const SizedBox(height: 16),
+        SizedBox(
           width: 378,
           height: 44,
           child: ElevatedButton(
@@ -95,7 +94,7 @@ class BodyLogin2 extends StatelessWidget {
             child:const Text('log In'),
           ),
         ),
-        SizedBox(height: 26),
+        const SizedBox(height: 26),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -110,11 +109,11 @@ class BodyLogin2 extends StatelessWidget {
                 // Xử lý sự kiện khi nhấn nút
               },
 
-              child: Text('Log in with Facebook',style: TextStyle(color: Colors.blue),),
+              child: const Text('Log in with Facebook',style: TextStyle(color: Colors.blue),),
             ),
           ],
         ),
-        SizedBox(height: 26),
+        const SizedBox(height: 26),
         Row(
           children: [
             Expanded(
@@ -123,9 +122,9 @@ class BodyLogin2 extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            SizedBox(width: 26),
-            Text('OR',style: TextStyle(color: Colors.grey),),
-            SizedBox(width: 26),
+            const SizedBox(width: 26),
+            const Text('OR',style: TextStyle(color: Colors.grey),),
+            const SizedBox(width: 26),
             Expanded(
               child: Container(
                 height: 1,
@@ -134,15 +133,13 @@ class BodyLogin2 extends StatelessWidget {
             ),
           ],
         ),
-      SizedBox(height: 36),
+      const SizedBox(height: 36),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-
-
           children: [
 
-            Text("Don't have an account?"),
+            const Text("Don't have an account?"),
 
             TextButton(
 
@@ -154,9 +151,8 @@ class BodyLogin2 extends StatelessWidget {
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.blue,
-
               ),
-              child: Text('Sign up'),
+              child: const Text('Sign up'),
             ),
           ],
         )

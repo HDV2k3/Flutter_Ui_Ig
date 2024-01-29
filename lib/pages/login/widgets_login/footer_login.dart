@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class FooterLogin extends StatelessWidget {
+  const FooterLogin({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Don’t have an account?"),
