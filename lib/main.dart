@@ -7,14 +7,20 @@ import 'package:ig_ui/pages/login/widgets_login/topbar_login2.dart';
 import 'package:ig_ui/pages/message/widgets_message/footer_direct_message.dart';
 import 'package:ig_ui/pages/message/widgets_message/listchatbox_message.dart';
 import 'package:ig_ui/pages/message/widgets_message/search_direct_message.dart';
-import 'package:ig_ui/pages/profile/widgets_profile/body_profile.dart';
+import 'package:ig_ui/pages/edit_profile/widgets_edit_profile/body_profile.dart';
 import 'package:ig_ui/pages/message/widgets_message/topbar_direct_message.dart';
-import 'package:ig_ui/pages/profile/widgets_profile/topbar_profile.dart';
-import 'package:ig_ui/pages/message/widgets_message/search_direct_message.dart';
+import 'package:ig_ui/pages/edit_profile/widgets_edit_profile/topbar_profile.dart';
+import 'package:ig_ui/pages/profile/widgets_profile/appbar_profile.dart';
+import 'package:ig_ui/pages/profile/widgets_profile/body_profile.dart';
+import 'package:ig_ui/pages/profile/widgets_profile/gridview_item.dart';
+import 'package:ig_ui/pages/profile/widgets_profile/task.dart';
+
+
+import 'my_app.dart';
 
 
 void main() {
-  runApp(  MyApp3());
+  runApp( const MyApp5());
 }
 
 //ui1
@@ -121,11 +127,37 @@ class MyApp4 extends StatelessWidget {
           children: [
             TopBar_Direct_Message(),
             Search_Direct_Message(),
-            Expanded(child: ListMessage()),
+            Expanded(child: ListMessage(),),
             Footer_Direct_Message(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class MyApp5 extends StatelessWidget {
+
+
+  const MyApp5({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AppBar_Profile(),
+              Expanded(child: Body_Profile()),
+              // Expanded(child: Task()),
+              Expanded(child: GridView_Item()),
+            ],
+          ),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -13,6 +13,9 @@ class ListMessage extends StatefulWidget {
 class _ListMessageState extends State<ListMessage> {
   final ScrollController _scrollController = ScrollController();
   final Random _random = Random();
+  final List<Image> _dataList = [];
+  bool _isLoading = false;
+
   final List<String> _imagePaths = [
     'assets/images/Profile1.png',
     'assets/images/Profile2.png',
@@ -23,9 +26,6 @@ class _ListMessageState extends State<ListMessage> {
     'assets/images/Profile7.png',
     'assets/images/Profile8.png',
   ];
-  final List<Image> _dataList = [];
-
-  bool _isLoading = false;
 
   @override
   void initState() {
@@ -149,5 +149,3 @@ class _ListMessageState extends State<ListMessage> {
     );
   }
 }
-// ui Direct_Message
-// cái ảnh camera 1 bên e nhắc vào mãi không được :99
