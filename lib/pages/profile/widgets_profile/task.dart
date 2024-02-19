@@ -7,6 +7,7 @@ class Task extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+<<<<<<< HEAD
     return const DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -37,3 +38,16 @@ class Task extends StatelessWidget
     );
   }
 }
+=======
+    return Row(
+      children: [
+
+        Expanded(child: Image.asset('assets/icons/Grid_Icon.png'),
+        ),
+        Expanded(child: Image.asset('assets/icons/Tags_Icon.png'),
+        ),
+      ],
+    );
+  }
+}
+>>>>>>> origin/main

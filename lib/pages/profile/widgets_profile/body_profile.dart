@@ -1,213 +1,283 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/profile/widgets_profile/task.dart';
 
-class Body_Profile extends StatelessWidget {
-  const Body_Profile({Key? key});
+class BodyProfile extends StatelessWidget
+{
+  const BodyProfile({super.key});
+
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController nameController = TextEditingController(text: 'Huỳnh Đắc Việt');
+    TextEditingController nameController1 = TextEditingController(text: 'DevLo');
+    TextEditingController nameController2 = TextEditingController(text: 'dacviethuynh@gmail.com');
+    TextEditingController nameController3 = TextEditingController(text: '+84 329 615 309');
+    TextEditingController nameController5 = TextEditingController(text: 'Male');
+
     return Column(
-
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: Stack(
+        Padding(
+          padding: const EdgeInsets.only(top: 120, left: 0),
+          child: Column(
             children: [
-            Positioned(
-            top: 40,
-            right: 300,
-            child: Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
+              Image.asset(
+                'assets/images/Oval_Profile.png',
+                width: 95,
+                height: 95,
+              ),
+              const SizedBox(height: 12.5),
+              TextButton(
+                onPressed: () {
+                },
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.blue,
+                ),
+                child: const Text('Change Profile Photo'),
+              ),
+              Opacity(
+                opacity: 0.5, // Độ mờ (giá trị từ 0.0 đến 1.0)
+                child: Container(
+                  width: double.infinity,
+                  height: 1,
                   color: Colors.grey,
-                  width: 2,
                 ),
               ),
-              child: Expanded(
-                flex: 1,
-                child: Image.asset(
-                  'assets/icons/Oval.png',
+          Column(
+
+            children: [
+            Container(
+            height: 50,
+            child: Row(
+              children: [
+            const    Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text('Name', style: TextStyle(color: Colors.black)),
+                  ),
                 ),
-              ),
+                SizedBox(width: 10),
+                Expanded(
+                  flex: 3,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 30),
+                    child: TextField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
+
           ),
-      const    Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 70, left: 150),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '54',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Post',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
+              Container(
+                height: 50,
+               child: Row(
+                  children: [
+                    const   Expanded(
+                      flex: 1,
+                      child: Padding(padding:  EdgeInsets.only(left: 15),
+                        child: Text('Username', style: TextStyle(color: Colors.black)),),
+
                     ),
-                  ),
-                  SizedBox(width: 10),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 70, left: 30),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          '834',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Followers',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 70, right: 40),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '162',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Following',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-              const    Column(
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 150, left: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'DevLo',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            'Information Technology @DevLo',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            'Everything is code',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                    const    SizedBox(width: 10),
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 30), child: TextField(
+                        controller: nameController1,
+                        decoration: InputDecoration(),
+                      ),
+
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ],
-          ),
-          Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 220),
-                    child: Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5.0),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 150.0, vertical: 5.0),
-                          primary: Colors.white,
-                          side: const BorderSide(
-                            color: Colors.grey,
-                            width: 0.8,
-                          ),
-                        ),
-                        child: const Text(
-                          'Edit Profile',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
+
+              Container(
+                height: 50,
+                child: const Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child:Padding(padding: EdgeInsets.only(left: 15),
+                        child: Text('Website', style: TextStyle(color: Colors.black)),
+                      )
+
                     ),
-                  ),
-                ],
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 3,
+                      child: Padding(padding: EdgeInsets.only(right: 30),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: ' website',
+                          ),
+                        ),
+                      )
+
+                    ),
+                  ],
+                ),
+              ),
+                 Container(
+                   height: 50,
+                   child :const Row(
+                     children: [
+                       Expanded(
+                         flex: 1,
+                         child: Padding(padding: EdgeInsets.only(left: 15),
+                           child: Text('Bio', style: TextStyle(color: Colors.black)),
+                         )
+
+                       ),
+                       SizedBox(width: 10),
+                       Expanded(
+                         flex: 3,
+                         child: Padding(padding: EdgeInsets.only(right: 30),
+                             child: TextField(
+                               decoration: InputDecoration(
+                                 hintText: 'Enter your bio',
+                                 border: InputBorder.none,
+                               ),
+                         )
+
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+              Opacity(
+                opacity: 0.5,
+                child: Container(
+                  width: double.infinity,
+                  height: 1,
+                  color: Colors.grey,
+                ),
               ),
             ],
           ),
-          Column(
-            children: [
+
+
+              Opacity(
+                opacity: 0.5, // Độ mờ (giá trị từ 0.0 đến 1.0)
+                child: Container(
+                  width: double.infinity,
+                  height: 1,
+                  color: Colors.grey,
+                ),
+              ),
           Row(
-          children: [
-         Padding(
-              padding: const EdgeInsets.only(top: 270, right: 8,left: 20),
-              child: Image.asset(
-                'assets/icons/Add_New_Story.png',
+            children: [
+              TextButton(
+                onPressed: () {
+                  // Xử lý sự kiện khi nhấn vào nút
+                },
+                child :const Padding(padding: EdgeInsets.only(left: 2),
+                  child: Text('Switch to Professional Account',style: TextStyle(color: Colors.blue),),
+               ),
               ),
-            ),
-
-         Padding(
-              padding: const EdgeInsets.only(top: 270, right: 20,left: 10),
-              child: Image.asset(
-                'assets/icons/Add_Story1.png',
+              ],
               ),
-            ),
+             const Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 16),
+                     child: Text('Private Information',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)
 
+                  )
 
-             Padding(
-              padding: const EdgeInsets.only(top: 270, right: 30,left: 10),
-              child: Image.asset(
-                'assets/icons/Add_Story2.png',
+                ],
               ),
-            ),
+          Column(
 
-           Padding(
-            padding: const EdgeInsets.only(top: 270, right: 40),
-            child: Image.asset(
-              'assets/icons/Add_Story3.png',
-            ),
+            children: [
+              Container(
+                height: 50,
+                child: Row(
+                  children: [
+                    const    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Text('Email', style: TextStyle(color: Colors.black)),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 30),
+                        child: TextField(
+                          controller: nameController2,
+                          decoration: InputDecoration(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+              ),
+              Container(
+                height: 50,
+                child: Row(
+                  children: [
+                    const   Expanded(
+                      flex: 1,
+                      child: Padding(padding:  EdgeInsets.only(left: 15),
+                        child: Text('Phone', style: TextStyle(color: Colors.black)),),
+
+                    ),
+                    const    SizedBox(width: 10),
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 30), child: TextField(
+                        controller: nameController3,
+                        decoration: InputDecoration(),
+                      ),
+
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              Container(
+                height: 50,
+                child: Row(
+                  children: [
+                  const  Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Text('Gender', style: TextStyle(color: Colors.black)),
+                      ),
+                    ),
+                    const   SizedBox(width: 10),
+                  Expanded(
+                    flex: 3,
+                    child: Padding(padding: EdgeInsets.only(right: 50),
+                    child: TextFormField(
+                      controller: nameController5,
+                      decoration: InputDecoration(),
+                    ),
+                    ),
+                  ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+            ],
           ),
+        ),
       ],
-    ),
-    ],
-    ),
-              Padding(padding: EdgeInsets.only(top: 355),
-              child: Container(
-                color: Colors.grey,
-                height: 0.8,
-                width: double.maxFinite,
-              ),
-              ),
-             const Padding(padding: EdgeInsets.only(top: 360),
-             child: Task(),
-             ),
-            ],
-            ),
-            ),
-            ],
-
     );
   }
 }

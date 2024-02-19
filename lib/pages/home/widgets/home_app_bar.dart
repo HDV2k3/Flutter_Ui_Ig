@@ -15,7 +15,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.only(left: 12),
         child: Image.asset(
           'assets/icons/Icon_Camera.png',
+<<<<<<< HEAD
           width: 24,  
+=======
+          width: 24,
+>>>>>>> origin/main
           fit: BoxFit.fitWidth,
         ),
       ),

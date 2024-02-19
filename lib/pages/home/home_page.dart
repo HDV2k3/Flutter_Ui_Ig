@@ -109,7 +109,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:ig_ui/pages/home/widgets/bottomNavigationBar.dart';
+=======
+>>>>>>> origin/main
 import 'package:ig_ui/pages/home/widgets/home_app_bar.dart';
 import '../../models/story.dart';
 import 'package:ig_ui/pages/home/widgets/post_list_view.dart';

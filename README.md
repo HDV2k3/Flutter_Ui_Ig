@@ -1,6 +1,6 @@
 # ig_ui
 
-A new Flutter project.
+UI INSTAGRAM Flutter project.
 
 ## Getting Started
 
