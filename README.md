@@ -1,16 +1,13 @@
-# ig_ui
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ảnh BTVN Buổi 9</title>
+</head>
+<body>
+    <h1>Ảnh thứ nhất</h1>
+    <img src="~/Anh_BTVN/Home.png" alt="#" width="300" height="200">
 
-UI INSTAGRAM Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    <h1>Ảnh thứ hai</h1>
+    <img src="~/Anh_BTVN/Profile.png" alt="Ảnh thứ hai" width="300" height="200">
+</body>
+</html>
