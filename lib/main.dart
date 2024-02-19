@@ -18,113 +18,6 @@ import 'package:ig_ui/pages/home/widgets/bottomNavigationBar.dart';
 void main() {
   runApp( const Widget_Profile());
 }
-// class Login extends StatelessWidget {
-//   const Login({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//
-//         ),
-//         body: const Center(
-//           child: BodyLogin(),
-//         ),
-//         bottomNavigationBar: Container(
-//           height: 60,
-//           decoration: BoxDecoration(
-//             border: Border(
-//               top: BorderSide(
-//                 color: Colors.grey.withOpacity(0.5),
-//                 width: 1.0,
-//               ),
-//             ),
-//           ),
-//           child:const FooterLogin(),
-//         ),
-//       ),
-//     );
-//   }
-// }
-// class Next_Login extends StatelessWidget {
-//   const Next_Login({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body:const Stack(
-//           children: [
-//             Positioned(
-//               top: 56,
-//               left: 16,
-//               width: 10,
-//               height: 18,
-//               child: TopBarLogin(),
-//             ),
-//             BodyLogin2(),
-//           ],
-//
-//         ),
-//         bottomNavigationBar: Container(
-//           height: 60,
-//           decoration: BoxDecoration(
-//             border: Border(
-//               top: BorderSide(
-//                 color: Colors.grey.withOpacity(0.5),
-//                 width: 1.0,
-//               ),
-//             ),
-//           ),
-//           child: const FooterLogin2(),
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-//
-// class Edit_Profile extends StatelessWidget
-// {
-//   const Edit_Profile({super.key});
-//
-//   @override
-//   Widget build(BuildContext context)
-//   {
-//     return const MaterialApp(
-//       home: Scaffold(
-//         body: Stack(
-//           children: [
-//             TopBar_Profile_Edit(),
-//             BodyProfileEdit(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-// class Message extends StatelessWidget {
-//   const Message({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Scaffold(
-//         body: Column(
-//           children: [
-//             TopBar_Direct_Message(),
-//             Search_Direct_Message(),
-//             Expanded(child: ListMessage()),
-//             Footer_Direct_Message(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 class Widget_Profile extends StatelessWidget {
   const Widget_Profile({Key? key}) : super(key: key);
 
@@ -141,10 +34,6 @@ class Widget_Profile extends StatelessWidget {
               const Expanded(
                 child: Body_Profile(),
               ),
-//               Expanded(
-//   child: ProfilePage(),
-// ),
-
               Expanded(
                 child: BottomNavigationBarProfile(),
               ),
@@ -157,7 +46,6 @@ class Widget_Profile extends StatelessWidget {
 }
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
@@ -166,4 +54,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar
