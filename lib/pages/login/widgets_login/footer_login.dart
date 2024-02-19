@@ -20,4 +20,4 @@ class FooterLogin extends StatelessWidget {
       ],
     );
   }
-}
+}//Author Việt Huỳnh
