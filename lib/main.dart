@@ -16,7 +16,7 @@ import 'package:ig_ui/pages/profile/widgets_profile/body_profile.dart';
 import 'package:ig_ui/pages/home/widgets/bottomNavigationBar.dart';
 
 void main() {
-  runApp( const Home());
+  runApp( const Widget_Profile());
 }
 // class Login extends StatelessWidget {
 //   const Login({super.key});
