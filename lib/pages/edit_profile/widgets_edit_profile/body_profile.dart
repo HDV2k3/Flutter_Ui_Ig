@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class BodyProfile extends StatelessWidget
+class BodyProfileEdit extends StatelessWidget
 {
-  const BodyProfile({super.key});
+  const BodyProfileEdit({super.key});
 
 
   @override

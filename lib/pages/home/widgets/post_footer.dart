@@ -43,37 +43,6 @@ class PostFooter extends StatelessWidget {
                   ],
                 ),
               ),
-              // Row(
-              //   children: [
-              //     Container(
-              //       margin: const EdgeInsets.symmetric(horizontal: 2),
-              //       decoration: const BoxDecoration(
-              //         shape: BoxShape.circle,
-              //         color: Color(0xFF3897F0),
-              //       ),
-              //       width: 6,
-              //       height: 6,
-              //     ),
-              //     Container(
-              //       margin: const EdgeInsets.symmetric(horizontal: 2),
-              //       decoration: BoxDecoration(
-              //         shape: BoxShape.circle,
-              //         color: const Color(0xFF000000).withOpacity(0.15),
-              //       ),
-              //       width: 6,
-              //       height: 6,
-              //     ),
-              //     Container(
-              //       margin: const EdgeInsets.symmetric(horizontal: 2),
-              //       decoration: BoxDecoration(
-              //         shape: BoxShape.circle,
-              //         color: const Color(0xFF000000).withOpacity(0.15),
-              //       ),
-              //       width: 6,
-              //       height: 6,
-              //     )
-              //   ],
-              // ),
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,

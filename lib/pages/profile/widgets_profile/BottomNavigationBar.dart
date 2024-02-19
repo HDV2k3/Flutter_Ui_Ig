@@ -26,64 +26,64 @@ class _BottomNavigationBarProfileState extends State<BottomNavigationBarProfile>
           GridView_Item(),
         ],
       ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon:
-              ImageIcon(
-                AssetImage('assets/icons/Tab1.png'),
-                size: 30,
-              ),
-              label: '',
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon:
+            ImageIcon(
+              AssetImage('assets/icons/Tab1.png'),
+              size: 30,
             ),
+            label: '',
+          ),
 
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('assets/icons/Tab2.png'),
-                size: 30,
-              ),
-              label: '',
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage('assets/icons/Tab2.png'),
+              size: 30,
             ),
-            BottomNavigationBarItem(
-              icon:  ImageIcon(
-                AssetImage('assets/icons/Tab3.png'),
-                size: 30,
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon:  ImageIcon(
+              AssetImage('assets/icons/Tab3.png'),
+              size: 30,
 
-              ),
-              label: '',
             ),
-            BottomNavigationBarItem(
-              icon:
-              ImageIcon(
-                AssetImage('assets/icons/Tab4.png'),
-                size: 30,
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon:
+            ImageIcon(
+              AssetImage('assets/icons/Tab4.png'),
+              size: 30,
 
-              ),
-              label: '',
             ),
-            BottomNavigationBarItem(
-              icon:  ImageIcon(
-                AssetImage('assets/icons/Tab5.png'),
-                size: 30,
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon:  ImageIcon(
+              AssetImage('assets/icons/Tab5.png'),
+              size: 30,
 
-              ),
-              label: '',
             ),
-          ],
-          // currentIndex: _selectedIndex,
-          // selectedItemColor: Colors.amber[800],
-          // onTap: _onItemTapped,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.black,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          onTap: _onItemTapped,
-          backgroundColor: Colors.white,
-          type: BottomNavigationBarType.fixed,
-          selectedIconTheme: IconThemeData(color: Colors.black),
-          unselectedIconTheme: IconThemeData(color: Colors.black),
-        ),
+            label: '',
+          ),
+        ],
+        // currentIndex: _selectedIndex,
+        // selectedItemColor: Colors.amber[800],
+        // onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        onTap: _onItemTapped,
+        backgroundColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        selectedIconTheme: IconThemeData(color: Colors.black),
+        unselectedIconTheme: IconThemeData(color: Colors.black),
+      ),
 
     );
   }
