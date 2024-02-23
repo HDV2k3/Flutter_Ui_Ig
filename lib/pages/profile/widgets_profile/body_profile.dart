@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ig_ui/pages/profile/widgets_profile/task.dart';
 
-class Body_Profile extends StatelessWidget {
-  const Body_Profile({Key? key});
+class BodyProfile extends StatelessWidget {
+  const BodyProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-
       children: [
         Expanded(
           child: Stack(
@@ -33,13 +32,13 @@ class Body_Profile extends StatelessWidget {
                   ),
                 ),
               ),
-              const    Column(
+              const Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 70, left: 150),
+                        padding: EdgeInsets.only(top: 70, left: 150),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -56,7 +55,7 @@ class Body_Profile extends StatelessWidget {
                       ),
                       SizedBox(width: 10),
                       Padding(
-                        padding: const EdgeInsets.only(top: 70, left: 30),
+                        padding: EdgeInsets.only(top: 70, left: 30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -73,7 +72,7 @@ class Body_Profile extends StatelessWidget {
                       ),
                       SizedBox(width: 20),
                       Padding(
-                        padding: const EdgeInsets.only(top: 70, right: 40),
+                        padding: EdgeInsets.only(top: 70, right: 40),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -92,13 +91,13 @@ class Body_Profile extends StatelessWidget {
                   ),
                 ],
               ),
-              const    Column(
+              const Column(
                 children: [
                   Row(
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 150, left: 20),
+                          padding:  EdgeInsets.only(top: 150, left: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -136,7 +135,8 @@ class Body_Profile extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 150.0, vertical: 5.0),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 150.0, vertical: 5.0),
                               primary: Colors.white,
                               side: const BorderSide(
                                 color: Colors.grey,
@@ -162,27 +162,26 @@ class Body_Profile extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 270, right: 8,left: 20),
+                        padding:
+                            const EdgeInsets.only(top: 270, right: 8, left: 20),
                         child: Image.asset(
                           'assets/icons/Add_New_Story.png',
                         ),
                       ),
-
                       Padding(
-                        padding: const EdgeInsets.only(top: 270, right: 20,left: 10),
+                        padding: const EdgeInsets.only(
+                            top: 270, right: 20, left: 10),
                         child: Image.asset(
                           'assets/icons/Add_Story1.png',
                         ),
                       ),
-
-
                       Padding(
-                        padding: const EdgeInsets.only(top: 270, right: 30,left: 10),
+                        padding: const EdgeInsets.only(
+                            top: 270, right: 30, left: 10),
                         child: Image.asset(
                           'assets/icons/Add_Story2.png',
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.only(top: 270, right: 40),
                         child: Image.asset(
@@ -193,22 +192,23 @@ class Body_Profile extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(padding: EdgeInsets.only(top: 355),
+              Padding(
+                padding:const EdgeInsets.only(top: 355),
                 child: Container(
                   color: Colors.grey,
                   height: 0.8,
                   width: double.maxFinite,
                 ),
               ),
-              const Padding(padding: EdgeInsets.only(top: 360),
+              const Padding(
+                padding: EdgeInsets.only(top: 360),
                 child: Task(),
               ),
             ],
           ),
         ),
       ],
-
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar
+

@@ -69,20 +69,20 @@ class _PostItemState extends State<PostItem> {
                     ),
                   ),
                 ),
-            Stack(
-              children: [
-                Padding(padding: EdgeInsets.only(top: 285),
-                child: Expanded(
+                Stack(
+                  children: [
+                    Padding(padding: EdgeInsets.only(top: 285),
+                      child: Expanded(
 
-                  child: DotsIndicator(
-                      itemCount: 3,
-                      currentIndex: _currentPage-1,
-                ),
-                ),
-                ),
-              ],
+                        child: DotsIndicator(
+                          itemCount: 3,
+                          currentIndex: _currentPage-1,
+                        ),
+                      ),
+                    ),
+                  ],
 
-              )
+                )
 
               ],
             ),

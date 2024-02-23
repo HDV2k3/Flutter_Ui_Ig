@@ -6,6 +6,7 @@ import '../../../models/post.dart';
 class PostFooter extends StatelessWidget {
   const PostFooter({
     required this.post,
+
     Key? key,
   }) : super(key: key);
 

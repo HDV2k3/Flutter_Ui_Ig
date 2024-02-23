@@ -22,9 +22,9 @@ class PostListView extends StatelessWidget {
         );
       },
       itemCount: posts.length,
-      separatorBuilder: (BuildContext context, int index) {
+      separatorBuilder: (context, index) {
         return Container(
-          height: 20,
+          height: 16,
           color: Colors.black.withOpacity(0.1),
         );
       },

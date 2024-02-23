@@ -167,7 +167,11 @@ class _HomePageState extends State<HomePage> {
     const Post(
       name: 'joshua_l',
       avatar: 'assets/images/Profile3.png',
-      images: ["assets/images/post.png","assets/images/Profile1.png","assets/images/Profile2.png"],
+      images: [
+        "assets/images/post.png",
+        "assets/images/Profile1.png",
+        "assets/images/Profile2.png"
+      ],
       address: 'Tokyo, Japan',
       comment: "The game in Japan was amazing and I want to share some photos",
       totalLike: 44686,
@@ -204,7 +208,7 @@ class _HomePageState extends State<HomePage> {
 
       List<Story> newStories = List.generate(
         3,
-            (index) => Story(
+        (index) => Story(
           name: 'new_user_${stories.length + index}',
           avatar: 'assets/images/Profile${index % 8 + 1}.png',
         ),
@@ -228,7 +232,7 @@ class _HomePageState extends State<HomePage> {
 
       List<Post> newPosts = List.generate(
         3,
-            (index) => Post(
+        (index) => Post(
           name: 'new_user_${posts.length + index}',
           avatar: 'assets/images/Profile${index % 8 + 1}.png',
           images: ["assets/images/post.png"],
@@ -257,7 +261,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Expanded(
-              flex: 1,
               child: NotificationListener<ScrollNotification>(
                 onNotification: (notification) {
                   if (notification is ScrollEndNotification &&
@@ -273,7 +276,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Expanded(
-              flex: 6,
+            flex: 3,
               child: NotificationListener<ScrollNotification>(
                 onNotification: (notification) {
                   if (notification is ScrollEndNotification &&
@@ -288,13 +291,15 @@ class _HomePageState extends State<HomePage> {
                     posts.isEmpty
                         ? const Center(child: CircularProgressIndicator())
                         : PostListView(
-                      posts: posts,
-                    ),
+                            posts: posts,
+                          ),
                     if (_isLoadingPosts)
                       Container(
                         alignment: Alignment.center,
                         padding: const EdgeInsets.only(top: 620),
-                        child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.red),),
+                        child: const CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                        ),
                       ),
                   ],
                 ),
@@ -307,3 +312,5 @@ class _HomePageState extends State<HomePage> {
   }
 }
 //lesson 9 update Bottom , tabbar,appbar
+//Author Việt Huỳnh
+//Author Việt Huỳnh
