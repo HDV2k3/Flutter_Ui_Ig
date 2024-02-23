@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GridView_Item extends StatelessWidget {
-  const GridView_Item({Key? key}) : super(key: key);
+class GridViewItem extends StatelessWidget {
+  const GridViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class GridView_Item extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Hình ${index + 1}',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style:const TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
                   );
