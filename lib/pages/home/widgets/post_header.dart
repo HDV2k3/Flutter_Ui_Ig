@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../models/post.dart';
+import 'package:flutter_svg/svg.dart';
+import '../models/post.dart';
 
 class PostHeader extends StatelessWidget {
   const PostHeader({
@@ -19,14 +19,14 @@ class PostHeader extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-         ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Image.asset(
-                post.avatar,
-                width: 32,
-                height: 32,
-              ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: Image.asset(
+              post.avatar,
+              width: 32,
+              height: 32,
             ),
+          ),
           const SizedBox(width: 10),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -37,15 +37,15 @@ class PostHeader extends StatelessWidget {
                   Text(
                     post.name,
                     style: const TextStyle(
-                      fontSize: 15,
+                      fontSize: 13,
                       color: Color(0xFF262626),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(width: 4),
                   if (post.isOfficial)
-                    Image.asset(
-                      'assets/icons/Official_Icon.png',
+                    SvgPicture.asset(
+                      'assets/icons/official.svg',
                       width: 10,
                       height: 10,
                     ),
@@ -63,8 +63,8 @@ class PostHeader extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           const Spacer(),
-          Image.asset(
-            'assets/icons/more_icon.png',
+          SvgPicture.asset(
+            'assets/icons/more.svg',
             width: 14,
             fit: BoxFit.fitWidth,
           ),
@@ -76,4 +76,3 @@ class PostHeader extends StatelessWidget {
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar

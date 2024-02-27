@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/home/widgets/post_item.dart';
-
-
-import '../../../models/post.dart';
-
+import '../models/post.dart';
+import 'post_item.dart';
 
 class PostListView extends StatelessWidget {
   const PostListView({
@@ -31,4 +28,3 @@ class PostListView extends StatelessWidget {
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar

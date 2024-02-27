@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ig_ui/pages/home/widgets/avatar_item.dart';
-import '../../../models/story.dart';
-
+import '../models/story.dart';
+import 'avatar_item.dart';
 
 class StoryItem extends StatelessWidget {
   const StoryItem({
-    Key? key,
     required this.story,
+    Key? key,
   }) : super(key: key);
 
   final Story story;
@@ -15,16 +14,17 @@ class StoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AvatarItem(
-          avatar: story.avatar,
-          isLive: story.isLive,
+        Expanded(
+          child: AvatarItem(
+            avatar: story.avatar,
+            isLive: story.isLive,
+          ),
         ),
         Text(
           story.name,
-          style: const TextStyle(fontSize: 11,fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 12),
         ),
       ],
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar

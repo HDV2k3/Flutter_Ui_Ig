@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/home/widgets/home_app_bar.dart';
-import 'package:ig_ui/pages/home/widgets/post_list_view.dart';
-import 'package:ig_ui/pages/home/widgets/story_list_view.dart';
-import 'models/post.dart';
-import 'models/story.dart';
 
+import '../home/models/post.dart';
+import '../home/models/story.dart';
+import '../home/widgets/home_app_bar.dart';
+import '../home/widgets/post_item.dart';
+import '../home/widgets/story_item.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class SearchPage extends StatefulWidget {
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SearchPage> createState() => _SearchPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SearchPageState extends State<SearchPage> {
   List<Story> stories = [
     const Story(name: 'Your Story', avatar: 'assets/images/avatar.png'),
     const Story(
@@ -91,19 +91,43 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const HomeAppBar(),
-      body: SafeArea(
-        child: Column(
-          children: [
-            StoryListView(
-              stories: stories,
+      body: Column(
+        children: [
+          SizedBox(
+            height: 98,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return StoryItem(
+                  story: stories[index],
+                );
+              },
+              itemCount: stories.length,
+              separatorBuilder: (context, index) {
+                return const SizedBox(
+                  width: 16,
+                );
+              },
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
             ),
-            Expanded(
-              child: PostListView(
-                posts: posts,
-              ),
+          ),
+          Expanded(
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return PostItem(
+                  post: posts[index],
+                );
+              },
+              itemCount: posts.length,
+              separatorBuilder: (context, index) {
+                return Container(
+                  height: 16,
+                  color: Colors.black.withOpacity(0.1),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

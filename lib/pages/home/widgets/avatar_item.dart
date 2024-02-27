@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class AvatarItem extends StatelessWidget {
   const AvatarItem({
-    Key? key,
     required this.avatar,
+    Key? key,
     this.isLive = false,
   }) : super(key: key);
 
@@ -18,7 +18,7 @@ class AvatarItem extends StatelessWidget {
         Container(
           width: 64,
           height: 64,
-          margin: const EdgeInsets.only(bottom: 4),
+          margin: const EdgeInsets.only(bottom: 0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: LinearGradient(
@@ -26,7 +26,7 @@ class AvatarItem extends StatelessWidget {
                   ? [
                       const Color(0xFFE20337),
                       const Color(0xFFC60188),
-                      const Color(0xFF7700C3)
+                      const Color(0xFF7700C3),
                     ]
                   : [
                       const Color(0xFFFBC147),
@@ -50,11 +50,11 @@ class AvatarItem extends StatelessWidget {
                 ),
               ),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(35),
                 child: Image.asset(
                   avatar,
-                  width: 60,
-                  height: 60,
+                  width: 80,
+                  height: 80,
                 ),
               ),
             ),
@@ -68,20 +68,21 @@ class AvatarItem extends StatelessWidget {
               width: 26,
               height: 16,
               decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFFC90083),
-                      Color(0xFFD22463),
-                      Color(0xFFE10038)
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                  ),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.circular(3)),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xFFC90083),
+                    Color(0xFFD22463),
+                    Color(0xFFE10038),
+                  ],
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                ),
+                border: Border.all(
+                  color: Colors.white,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(3),
+              ),
               child: const Center(
                 child: Text(
                   'LIVE',
@@ -97,4 +98,3 @@ class AvatarItem extends StatelessWidget {
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar

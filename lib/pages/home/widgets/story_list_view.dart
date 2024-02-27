@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/home/widgets/story_item.dart';
-
-import '../../../models/story.dart';
+import '../models/story.dart';
+import 'story_item.dart';
 
 class StoryListView extends StatelessWidget {
   const StoryListView({
@@ -13,7 +12,7 @@ class StoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return SizedBox(
+    return SizedBox(
       height: 98,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
@@ -23,7 +22,7 @@ class StoryListView extends StatelessWidget {
           );
         },
         itemCount: stories.length,
-        separatorBuilder: (BuildContext context, int index) {
+        separatorBuilder: (context, index) {
           return const SizedBox(
             width: 16,
           );
@@ -33,4 +32,3 @@ class StoryListView extends StatelessWidget {
     );
   }
 }
-//lesson 9 update Bottom , tabbar,appbar

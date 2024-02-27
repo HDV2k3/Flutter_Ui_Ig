@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/home/widgets/post_footer.dart';
-import 'package:ig_ui/pages/home/widgets/post_header.dart';
 
-import '../../../models/post.dart';
-import 'dot_with_post.dart';
+import '../models/post.dart';
+import 'post_footer.dart';
+import 'post_header.dart';
 
 class PostItem extends StatefulWidget {
   const PostItem({
@@ -14,83 +13,69 @@ class PostItem extends StatefulWidget {
   final Post post;
 
   @override
-  _PostItemState createState() => _PostItemState();
+  State<PostItem> createState() => _PostItemState();
 }
 
-class _PostItemState extends State<PostItem> {
-  final PageController _pageController = PageController();
-  int _currentPage = 1;
+class _PostItemState extends State<PostItem> with TickerProviderStateMixin {
+  late PageController _pageViewController;
+  late TabController _tabController;
+  int _currentPageIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageViewController = PageController();
+    _tabController = TabController(
+      length: widget.post.images.length,
+      vsync: this,
+    );
+  }
 
   @override
   void dispose() {
-    _pageController.dispose();
     super.dispose();
+    _pageViewController.dispose();
+    _tabController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
       color: Colors.white,
+      width: screenWidth,
       child: Column(
         children: [
           PostHeader(post: widget.post),
-          Container(
-            height: 300,
-            child: Stack(
-              children: [
-                PageView.builder(
-                  controller: _pageController,
-                  physics: AlwaysScrollableScrollPhysics(),
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    final imageIndex = index % widget.post.images.length;
-                    return Image.asset(
-
-                      widget.post.images[imageIndex],
-                      fit: BoxFit.cover,
-                    );
-                  },
-                  onPageChanged: (index) {
-                    setState(() {
-                      _currentPage = index +1 ;
-                    });
-                  },
-                ),
-                Expanded(
-
-                  child: Padding(padding: EdgeInsets.only(left: 380),
-                    child: Text(
-                      '${_currentPage }/${3}',
-                      style: TextStyle(
-                        color: Colors.black12,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-                Stack(
-                  children: [
-                    Padding(padding: EdgeInsets.only(top: 285),
-                      child: Expanded(
-
-                        child: DotsIndicator(
-                          itemCount: 3,
-                          currentIndex: _currentPage-1,
-                        ),
-                      ),
-                    ),
-                  ],
-
-                )
-
-              ],
+          SizedBox(
+            width: screenWidth,
+            height: screenWidth,
+            child: PageView.builder(
+              itemBuilder: (context, index) {
+                return Image.asset(
+                  widget.post.images[index],
+                  fit: BoxFit.fitWidth,
+                );
+              },
+              itemCount: widget.post.images.length,
+              controller: _pageViewController,
+              onPageChanged: _handlePageViewChanged,
             ),
           ),
-          PostFooter(post: widget.post),
+          PostFooter(
+            post: widget.post,
+            selectedImageIndex: _currentPageIndex,
+          ),
         ],
       ),
     );
   }
+
+  void _handlePageViewChanged(int currentPageIndex) {
+    _tabController.index = currentPageIndex;
+    setState(() {
+      _currentPageIndex = currentPageIndex;
+    });
+  }
 }
-//lesson 9 update Bottom , tabbar,appbar
