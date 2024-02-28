@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ig_ui/pages/favorite/favorite_page.dart';
 
 import '../pages/home/home_page.dart';
 import '../pages/profile/profile_page.dart';
+import '../pages/search/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -55,7 +57,7 @@ class _MainPageState extends State<MainPage> {
             padding: const EdgeInsets.only(top: 10),
             child: SvgPicture.asset(
               _selectedTabIndex == 0
-                  ?   'assets/icons/selected_home_tab.svg'
+                  ? 'assets/icons/selected_home_tab.svg'
                   : 'assets/icons/home_tab.svg',
               height: 24,
               fit: BoxFit.fitHeight,
@@ -69,7 +71,7 @@ class _MainPageState extends State<MainPage> {
             child: SvgPicture.asset(
               _selectedTabIndex == 1
                   ? 'assets/icons/selected_search_tab.svg'
-                  :   'assets/icons/search_tab.svg',
+                  : 'assets/icons/search_tab.svg',
               height: 24,
               fit: BoxFit.fitHeight,
             ),
@@ -93,7 +95,7 @@ class _MainPageState extends State<MainPage> {
             child: SvgPicture.asset(
               _selectedTabIndex == 3
                   ? 'assets/icons/selected_favorite_tab.svg'
-                  :  'assets/icons/favorite_tab.svg',
+                  : 'assets/icons/favorite_tab.svg',
               height: 24,
               fit: BoxFit.fitHeight,
             ),
@@ -145,13 +147,9 @@ class _MainPageState extends State<MainPage> {
           child: Text('Search Screen'),
         );
       case 2:
-        return const Center(
-          child: Text('New Screen'),
-        );
+        return const SearchPage();
       case 3:
-        return const Center(
-          child: Text('Favorite Screen'),
-        );
+        return const FavoritePage();
       case 4:
         return const ProfilePage();
       default:
