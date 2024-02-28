@@ -10,7 +10,6 @@ import '../edit_profile/edit_profile_page.dart';
 import 'models/profile_story.dart';
 import 'models/user.dart';
 
-
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -156,7 +155,7 @@ class _ProfilePageState extends State<ProfilePage>
               if (_selectedIndex == 0)
                 ProfilePostGridView(posts: gridPosts)
               else
-                ProfilePostGridView(posts: tagPosts),
+                ProfilePostGridView(posts: tagPosts)
             ],
           ),
         ),
