@@ -61,14 +61,14 @@ class _ListViewNotificationState extends State<ListViewNotification> {
     'This Month': [
       NotificationModel(
         avatar: 'assets/images/avatar3.png',
-        action: 'Action 7',
+        action: 'hello bro',
         image: null,
         messageButtonLabel: 'Message',
         messageButton: () {},
       ),
       NotificationModel(
         avatar: 'assets/images/avatar4.png',
-        action: 'Action 8',
+        action: 'Viet following me',
         image: null,
         messageButtonLabel: 'Follow',
         messageButton: () {},
@@ -134,7 +134,7 @@ class _ListViewNotificationState extends State<ListViewNotification> {
                                 style: ElevatedButton.styleFrom(
                                   foregroundColor:
                                       notification.messageButtonLabel ==
-                                              'Follow'
+                                              'Message'
                                           ? Colors.white
                                           : Colors.grey,
                                   backgroundColor:
@@ -151,7 +151,7 @@ class _ListViewNotificationState extends State<ListViewNotification> {
                                             'Follow'
                                         ? Colors.white
                                         : Colors.grey,
-                                    fontFamily: 'SF Pro Text',
+                                    // fontFamily: 'SF Pro Text',
                                   ),
                                 ),
                               ),
