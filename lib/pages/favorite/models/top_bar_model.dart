@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ig_ui/pages/favorite/models/tab_bar_items.dart';
+import 'package:ig_ui/pages/favorite/models/top_bar_items.dart';
 
 class TabBarModel {
   List<TabItem> tabs;

@@ -143,11 +143,12 @@ class _MainPageState extends State<MainPage> {
       case 0:
         return const HomePage();
       case 1:
-        return const Center(
-          child: Text('Search Screen'),
-        );
-      case 2:
         return const SearchPage();
+      case 2:
+        return const Center(
+          child: Text('Center Screen'),
+        );
+
       case 3:
         return const FavoritePage();
       case 4:

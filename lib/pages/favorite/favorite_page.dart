@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ig_ui/pages/favorite/widgets/follow_request.dart';
 import 'package:ig_ui/pages/favorite/widgets/list_notification.dart';
-import 'models/tab_bar_model.dart';
-import 'package:ig_ui/pages/favorite/widgets/tab_bar.dart';
-import 'models/tab_bar_items.dart';
+import 'models/top_bar_model.dart';
+import 'package:ig_ui/pages/favorite/widgets/top_bar.dart';
+import 'models/top_bar_items.dart';
 
 class FavoritePage extends StatefulWidget {
   const FavoritePage({

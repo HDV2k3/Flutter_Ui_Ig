@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/tab_bar_model.dart';
+import '../models/top_bar_model.dart';
 
 class TabBarWidget extends StatelessWidget {
   final TabBarModel tabBarModel;
