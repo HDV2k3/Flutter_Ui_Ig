@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class PhotosListView extends StatelessWidget {
   final List<String> photoUrls;
-
   const PhotosListView({super.key, required this.photoUrls});
 
   @override

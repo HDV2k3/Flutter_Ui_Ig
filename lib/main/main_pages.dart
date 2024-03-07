@@ -148,7 +148,6 @@ class _MainPageState extends State<MainPage> {
         return const Center(
           child: Text('Center Screen'),
         );
-
       case 3:
         return const FavoritePage();
       case 4:
